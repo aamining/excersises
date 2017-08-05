@@ -1,6 +1,9 @@
 # time = link 'https://www.timeanddate.com/time/zone/australia/sydney'
+def fileopen
 File.new("account.txt", 'a')
 File.open('account.txt')
+end
+fileopen
 j= File.read('account.txt').to_i
 
 puts("-----------------------------------------")
