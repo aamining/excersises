@@ -90,15 +90,14 @@ class Atm
 
   attr_accessor :address, :current_cash
   # attr_accessor use for both getters and setters
+  # If we use attribute accessor (attr_accessor), we donot need any def method to
+  # addreess any arguments in class
 
 # getters
   # def address
   #   @address
   # end
-# setters
-  # def size=(new_size)
-  #   @size = new_size
-  # end
+
   def balance
     puts " Your Available Balance is:" +  @current_cash.to_s
   end
@@ -121,14 +120,16 @@ area = gets.chomp.to_i
 case area
   when 1
     broadway_Atm.greeting
+    # .greeting is working because a def methode has been difined for.
     puts broadway_Atm.address
+    # there is not any def method for .address but it is working because of attribute accessor
     puts " Your Available Balance is:" +  broadway_Atm.current_cash.to_s
-    # the available balance will work because of Attribute accesor, defined in line 91
+    # the available balance will work because of Attribute accesor.
   when 2
     ultimo_Atm.greeting
     puts ultimo_Atm.address
     puts " Your Available Balance is:" +  @current_cash.to_s
-    # the available balance would not work because @current_cash just work inside class
+    # the available balance would not work because @current_cash just work inside class and def methode
   when 3
     hornsby_Atm.greeting
     puts hornsby_Atm.address
