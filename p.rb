@@ -1,5 +1,5 @@
 
-def ali() # read all questions and answers in to arrays
+def read_qa() # read all questions and answers in to arrays
   questions=[]
   answers=[]
   File.read('qruby.txt').each_line {|line| questions.push line.chomp}
@@ -9,7 +9,7 @@ def ali() # read all questions and answers in to arrays
     :a => answers
   }
   return response
-
+  end
   res = read_qa()
 
   questions_count = res[:q].length
@@ -29,7 +29,7 @@ def ali() # read all questions and answers in to arrays
   else
     puts false
   end
-end
+# end
 
 #                          Input Question and answers
 # def write_q()
