@@ -10,6 +10,8 @@ def read_qa() # read all questions and answers in to arrays
   }
   return response
   end
+
+# call read_qa()method and run Quiz
   res = read_qa()
 
   questions_count = res[:q].length
